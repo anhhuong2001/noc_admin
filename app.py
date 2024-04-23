@@ -14,7 +14,7 @@ account_list = [
 def get_account_list():
     return jsonify(account_list)
 
-@app.route("/add_account", method = ['POST'])
+@app.route("/add_account", methods = ['POST'])
 def add_account():
     id = request.json['id']
     username = request.json['username']
