@@ -7,14 +7,14 @@ def hello():
 
 account_list = [
     {"id": 1, "username" : "huong", "password": 1234},
-    {"id": 2 , "username" : "thuy", "password" : 5678},
+    {"id": 2 , "username" : "thuy", "password" : 5678}
 ]
 
 @app.route("/get_account_list")
 def get_account_list():
     return jsonify(account_list)
 
-@app.route("/add_account", methods = ['POST'])
+@app.route("/add_account", methods = ["POST"])
 def add_account():
     id = request.json['id']
     username = request.json['username']
